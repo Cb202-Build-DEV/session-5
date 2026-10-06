@@ -27,6 +27,7 @@ const fruits = ["kiwi", "orange", "apple"];
 //console.log(fruits[0]);
 
 // STEP 3:
+
 //console.log(fruits.length);
 //console.log();
 
@@ -48,11 +49,11 @@ const book = {
 
 console.log();
 // STEP 2:
-console.log(book.title);
+//console.log(book.title);
 
 // STEP 3:
-console.log(book["author"]);
-console.log();
+//console.log(book["author"]);
+//console.log();
 
 /* ------------------------------------------------------------------ *
  * SECTION 3 — The this keyword
@@ -68,11 +69,15 @@ const circle = {
   radius: 5,
 
   // add your area() method here
-
+  area: function() {
+    return Math.PI * this.radius * this.radius;
+  }
 };
 
 // STEP 3:
-
+//console.log("Section 3");
+//console.log(circle.area());
+//console.log();
 
 
 /* ------------------------------------------------------------------ *
@@ -139,7 +144,7 @@ const total = prices.reduce((total, prices) => total + prices, 0);
  *
  * STEP 1: Create an array called `roster`.
  * STEP 2: Each item is an object with name, number, and a
- *         pointsPerGame array (at least 3 numbers). Add at least
+ *         grades array (at least 3 numbers). Add at least
  *         3 players.
  * STEP 3: Write a function addAverage(player) that calculates the
  *         player's scoring average and adds it as a new avgPoints
@@ -150,14 +155,18 @@ const total = prices.reduce((total, prices) => total + prices, 0);
 
 // STEP 1 + STEP 2:
 const roster = [
-  // { name: "Sam", number: 7, pointsPerGame: [12, 18, 9] }
+  // { name: "Sam", number: 7, grades: [12, 18, 9] }
+  {student: "Sam", id: 1, grades: [43, 85, 9]},
+  {student: "Alyssa", id: 2, grades: [99, 98, 97]},
+  {student: "Bernice", id: 3, grades: [76, 67, 100]}
 ];
 
 // STEP 3:
-function addAverage(player) {
-
+function addAverage(student) {
+  const total = student.reduce((total, grade) => total + grade, 0);
+  const avg = total/students.grades.length;
 }
-
+addAverage(roster);
 // STEP 4:
 
 
