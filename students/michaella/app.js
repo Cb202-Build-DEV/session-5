@@ -65,11 +65,14 @@ console.log(book["author"]);
 // STEP 1 + STEP 2:
 const circle = {
   radius: 5,
+  area: function() {
+    return this.radius * Math.PI * this.radius
+  }
 
   // add your area() method here
 
 };
-
+  console.log(circle.area());
 // STEP 3:
 
 
@@ -145,16 +148,26 @@ console.log(withTax, premium, total);
  * ------------------------------------------------------------------ */
 
 // STEP 1 + STEP 2:
-const roster = [
+const roster = [ 
   // { name: "Sam", number: 7, pointsPerGame: [12, 18, 9] }
+  {name: "ethan", id: 23, grades: [23,67,93] },
+  {name: "brent", id: 8, grades: [20,15,10] },
+  {name: "tiffany", id: 1, grades: [99,98,100] },
 ];
 
 // STEP 3:
 function addAverage(player) {
+  const total = student.reduce((total, grade) => total + grade, 0)
+  const avg = total / (student.grades.length);
+  student.average = avg;
 
 }
 
 // STEP 4:
-
+for (const student in roster){
+  console.log({student.name}: average grade is - ${student.average})
+}
 
 // STEP 5:
+
+
