@@ -163,10 +163,20 @@ const roster = [
 
 // STEP 3:
 function addAverage(student) {
-  const total = student.reduce((total, grade) => total + grade, 0);
-  const avg = total/students.grades.length;
+  const total = student.grades.reduce((total, grade) => total + grade, 0);
+  const avg = total/student.grades.length;
+  student.average = avg;
 }
-addAverage(roster);
+
+/*addAverage(roster[0]);
+addAverage(roster[1]);
+addAverage(roster[2]);
+console.log(roster[0].average + " " + roster[1].average + " " + roster[2].average);*/
+
+for (const student in roster){
+  addAverage(roster[student]);
+  console.log(`${roster[student].student}'s average grade is: ${roster[student].average}`);
+}
 // STEP 4:
 
 
